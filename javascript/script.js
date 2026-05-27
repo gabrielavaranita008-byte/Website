@@ -1992,7 +1992,6 @@ class UserManager {
 }
 
 const userManager = new UserManager();
-
 function openEditProfileModal() {
 
     const currentProfile =
