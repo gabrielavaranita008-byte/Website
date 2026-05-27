@@ -1764,3 +1764,27 @@ button,
 
     margin-bottom: 40px;
 }
+
+@media (max-width: 768px) {
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-content {
+        grid-template-columns: 1fr;
+    }
+
+    .reviews-tools {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+}
