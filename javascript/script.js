@@ -1992,3 +1992,49 @@ class UserManager {
 }
 
 const userManager = new UserManager();
+
+function openEditProfileModal() {
+
+    const currentProfile =
+        JSON.parse(
+            localStorage.getItem('rateMe_profile') || '{}'
+        );
+
+    document.getElementById('edit-profile-name').value =
+        currentProfile.name || '';
+
+    document.getElementById('edit-profile-email').value =
+        currentProfile.email || '';
+
+    document.getElementById('edit-profile-bio').value =
+        currentProfile.bio || '';
+
+    document.getElementById('edit-profile-modal').style.display =
+        'flex';
+}
+
+function saveProfileChanges() {
+
+    const updatedProfile = {
+
+        name:
+            document.getElementById('edit-profile-name').value,
+
+        email:
+            document.getElementById('edit-profile-email').value,
+
+        bio:
+            document.getElementById('edit-profile-bio').value
+    };
+
+    localStorage.setItem(
+        'rateMe_profile',
+        JSON.stringify(updatedProfile)
+    );
+
+    alert('Profile updated successfully!');
+}
+
+document
+    .getElementById('edit-profile-btn')
+    .addEventListener('click', openEditProfileModal);
