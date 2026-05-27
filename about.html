@@ -1,219 +1,28 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - RateMe</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>RateMe</title>
+    <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .about-container {
-            max-width: 1200px;
-            margin: 80px auto 0;
-            padding: 40px 20px;
-        }
-
-        .about-hero {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .about-hero p {
-            font-size: 1.2rem;
-            color: var(--text-light);
-            max-width: 700px;
-            margin: 20px auto 0;
-            line-height: 1.8;
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            margin-bottom: 60px;
-            align-items: center;
-        }
-
-        .about-content {
-            color: var(--text-light);
-            line-height: 1.8;
-        }
-
-        .about-content h2 {
-            font-size: 2rem;
-            color: var(--text);
-            margin-bottom: 20px;
-        }
-
-        .about-content p {
-            margin-bottom: 15px;
-        }
-
-        .about-highlight {
-            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(236, 72, 153, 0.1) 100%);
-            padding: 25px;
-            border-radius: 15px;
-            border-left: 4px solid var(--primary);
-            margin: 25px 0;
-        }
-
-        .about-image {
-            position: relative;
-            height: 400px;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-        }
-
-        .about-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-            margin: 60px 0;
-        }
-
-        .value-card {
-            background: linear-gradient(135deg, rgba(26, 31, 58, 0.6) 0%, rgba(51, 65, 85, 0.4) 100%);
-            border-radius: 15px;
-            padding: 30px;
-            border: 1px solid var(--border);
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .value-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 25px 50px rgba(99, 102, 241, 0.2);
-        }
-
-        .value-icon {
-            font-size: 3rem;
-            margin-bottom: 15px;
-        }
-
-        .value-card h3 {
-            font-size: 1.3rem;
-            margin: 0 0 15px 0;
-            color: var(--text);
-        }
-
-        .value-card p {
-            color: var(--text-light);
-            line-height: 1.6;
-        }
-
-        .team-section {
-            margin: 60px 0;
-            text-align: center;
-        }
-
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .team-member {
-            background: linear-gradient(135deg, rgba(26, 31, 58, 0.6) 0%, rgba(51, 65, 85, 0.4) 100%);
-            border-radius: 15px;
-            overflow: hidden;
-            border: 1px solid var(--border);
-            transition: all 0.3s ease;
-        }
-
-        .team-member:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 30px 60px rgba(99, 102, 241, 0.3);
-        }
-
-        .team-member-image {
-            height: 250px;
-            overflow: hidden;
-        }
-
-        .team-member-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .team-member:hover .team-member-image img {
-            transform: scale(1.1);
-        }
-
-        .team-member-info {
-            padding: 25px;
-            text-align: center;
-        }
-
-        .team-member h4 {
-            font-size: 1.2rem;
-            margin: 0 0 5px 0;
-            color: var(--text);
-        }
-
-        .team-member p {
-            color: var(--secondary);
-            font-size: 0.9rem;
-            margin: 0 0 15px 0;
-        }
-
-        .team-member-socials {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-        }
-
-        .team-member-socials a {
-            width: 35px;
-            height: 35px;
-            background: rgba(99, 102, 241, 0.2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary);
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .team-member-socials a:hover {
-            background: var(--primary);
-            color: white;
-        }
-
-        @media (max-width: 768px) {
-            .about-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .about-image {
-                height: 300px;
-            }
-        }
-    </style>
+    <link rel="icon" type="image/png" href="image/star.png">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">
+            <a href="home.html"><div class="logo">
                 <i class="fas fa-star"></i> RateMe
-            </div>
+            </div></a>
             <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="home.html" class="nav-link">Home</a></li>
                 <li><a href="reviews.html" class="nav-link">Reviews</a></li>
                 <li><a href="categories.html" class="nav-link">Categories</a></li>
                 <li><a href="profile.html" class="nav-link">Profile</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="about.html" class="nav-link active">About</a></li>
+                <li><button id="nav-login-btn" class="nav-link" style="background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%); padding: 8px 20px; border-radius: 25px; border: none; cursor: pointer; color: white; font-weight: 600; transition: all 0.3s ease;">Login</button></li>
             </ul>
         </div>
     </nav>
@@ -326,266 +135,142 @@
     </div>
 
     <!-- Footer -->
-   <footer class="footer">
-
+<footer class="footer">
     <div class="container">
-
         <div class="footer-content">
-
             <div class="footer-section">
                 <h4>RateMe</h4>
-
-                <p>
-                    The most beautiful rating platform
-                    on the internet.
-                </p>
+                <p>The most beautiful rating platform on the internet.</p>
             </div>
 
             <div class="footer-section">
-
                 <h4>Quick Links</h4>
-
                 <ul>
-
                     <li><a href="home.html">Home</a></li>
-
-                    <li><a href="reviews.html">Reviews</a></li>
-
-                    <li><a href="categories.html">Categories</a></li>
-
-                    <li><a href="profile.html">Profile</a></li>
-
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="profile.html">Privacy Policy</a></li>
+                    <li><a href="profile.html">Terms & Conditions</a></li>
                 </ul>
-
             </div>
 
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
         </div>
 
+        <div class="footer-bottom">
+            <p>&copy; 2026 RateMe. All rights reserved.</p>
+        </div>
     </div>
-
 </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script>
-        // Helper functions
-        function createRipple(event, element) {
-            const ripple = document.createElement('span');
-            const rect = element.getBoundingClientRect();
-            const size = Math.max(rect.width, rect.height);
-            const x = event.clientX - rect.left - size / 2;
-            const y = event.clientY - rect.top - size / 2;
-            
-            ripple.style.width = ripple.style.height = size + 'px';
-            ripple.style.left = x + 'px';
-            ripple.style.top = y + 'px';
-            ripple.classList.add('ripple');
-            
-            element.appendChild(ripple);
-            
-            setTimeout(() => ripple.remove(), 600);
-        }
+    <!-- Modal Sistema -->
+    <div id="modal-overlay" class="modal-overlay"></div>
 
-        function showNotification(message, duration = 3000) {
-            const toast = document.createElement('div');
-            toast.className = 'notification-toast show';
-            toast.textContent = message;
-            document.body.appendChild(toast);
-            
-            gsap.to(toast, {
-                duration: 0.4,
-                opacity: 1,
-            });
-            
-            setTimeout(() => {
-                gsap.to(toast, {
-                    duration: 0.4,
-                    opacity: 0,
-                    onComplete: () => toast.remove()
-                });
-            }, duration);
-        }
+    <!-- Login/Register Modal -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <button type="button" class="modal-close">&times;</button>
+            <h2>Login / Register</h2>
+            <form id="login-form" autocomplete="on">
+            <div id="login-form-container">
+                <div class="form-group">
+                    <label>Name:</label>
+                    <input type="text" id="user-name" name="name" placeholder="Enter your name..." autocomplete="name" required>
+                </div>
+                <div class="form-group">
+                    <label>Email:</label>
+                    <input type="email" id="user-email" name="email" placeholder="Enter your email..." autocomplete="email" required>
+                </div>
+                <div class="form-group">
+                    <label>Password:</label>
+                    <input type="password" id="user-password" name="password" placeholder="Create a password..." autocomplete="current-password" required>
+                </div>
+                <button id="login-btn" type="submit" class="modal-btn">Save Login</button>
+                <p style="color: var(--text-light); text-align: center; margin-top: 15px; font-size: 14px;">
+                    Your data is saved on your device 
+                </p>
+            </div>
+            </form>
+            <div id="logged-in-info" style="display: none;">
+                <div class="user-info">
+                    <p><strong>User:</strong> <span id="logged-user-name"></span></p>
+                    <p><strong>Email:</strong> <span id="logged-user-email"></span></p>
+                </div>
+                <button id="logout-btn" style="background: rgba(236, 72, 153, 0.3); border: 2px solid var(--secondary);">Logout</button>
+            </div>
+        </div>
+    </div>
 
-        // Page transition
-        document.querySelectorAll('a[href$=".html"]').forEach(link => {
-            link.addEventListener('click', (e) => {
-                const href = link.getAttribute('href');
-                if (!href.includes('.html')) return;
-                e.preventDefault();
-                
-                createRipple(e, link);
-                
-                gsap.to('body', {
-                    duration: 0.5,
-                    opacity: 0,
-                    onComplete: () => {
-                        window.location.href = href;
-                    }
-                });
-            });
-        });
+    <!-- Rating Modal -->
+    <div id="rating-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>Rate Something Amazing!</h2>
+            <form id="rating-form">
+                <div class="form-group">
+                    <label>What would you like to rate?</label>
+                    <input type="text" placeholder="e.g., Restaurant, Product, Movie..." required>
+                </div>
+                <div class="form-group">
+                    <label>Your Rating</label>
+                    <div class="star-rating">
+                        <span class="star" data-value="1">★</span>
+                        <span class="star" data-value="2">★</span>
+                        <span class="star" data-value="3">★</span>
+                        <span class="star" data-value="4">★</span>
+                        <span class="star" data-value="5">★</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Your Review</label>
+                    <textarea placeholder="Share your experience..." rows="5"></textarea>
+                </div>
+                <button type="submit" class="modal-btn">Submit Review</button>
+            </form>
+        </div>
+    </div>
 
-        gsap.from('body', {
-            duration: 0.6,
-            opacity: 0,
-            delay: 0.1,
-        });
+    <!-- Success Modal -->
+    <div id="success-modal" class="modal">
+        <div class="modal-content success-modal-content">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Review Published!</h2>
+            <p>Your review has been successfully posted to RateMe!</p>
+            <button class="modal-btn" onclick="closeAllModals()">Great!</button>
+        </div>
+    </div>
 
-        gsap.registerPlugin(ScrollTrigger);
+    <!-- Subscribe Modal -->
+    <div id="subscribe-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>Join Our Community</h2>
+            <p>Get exclusive access to premium reviews and features</p>
+            <form id="subscribe-form">
+                <div class="form-group">
+                    <input type="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Full Name" required>
+                </div>
+                <button type="submit" class="modal-btn">Subscribe Now</button>
+            </form>
+            <p style="font-size: 0.9rem; color: var(--text-light); margin-top: 15px;">No spam, just amazing reviews!</p>
+        </div>
+    </div>
 
-        // Animate hero
-        gsap.from('.about-hero', {
-            duration: 0.8,
-            opacity: 0,
-            y: 30,
-            ease: 'power3.out',
-        });
+    <!-- Notification Toast -->
+    <div id="notification-toast" class="notification-toast"></div>
 
-        // Animate about grid
-        gsap.from('.about-grid', {
-            scrollTrigger: {
-                trigger: '.about-grid',
-                start: 'top 70%',
-                once: true,
-            },
-            duration: 0.8,
-            opacity: 0,
-            x: -50,
-            ease: 'power3.out',
-        });
-
-        gsap.from('.about-image', {
-            scrollTrigger: {
-                trigger: '.about-grid',
-                start: 'top 70%',
-                once: true,
-            },
-            duration: 0.8,
-            opacity: 0,
-            x: 50,
-            delay: 0.2,
-            ease: 'power3.out',
-        });
-
-        // Animate value cards
-        document.querySelectorAll('.value-card').forEach((card, index) => {
-            gsap.from(card, {
-                scrollTrigger: {
-                    trigger: card,
-                    start: 'top 80%',
-                    once: true,
-                },
-                duration: 0.6,
-                opacity: 0,
-                scale: 0.8,
-                delay: index * 0.1,
-                ease: 'back.out',
-            });
-
-            card.addEventListener('mouseenter', () => {
-                gsap.to(card, {
-                    duration: 0.3,
-                    y: -10,
-                    boxShadow: '0 20px 50px rgba(139, 92, 246, 0.3)',
-                });
-
-                gsap.to(card.querySelector('.value-icon'), {
-                    duration: 0.3,
-                    scale: 1.2,
-                    rotation: 10,
-                });
-            });
-
-            card.addEventListener('mouseleave', () => {
-                gsap.to(card, {
-                    duration: 0.3,
-                    y: 0,
-                    boxShadow: 'none',
-                });
-
-                gsap.to(card.querySelector('.value-icon'), {
-                    duration: 0.3,
-                    scale: 1,
-                    rotation: 0,
-                });
-            });
-        });
-
-        // Animate team members
-        document.querySelectorAll('.team-member').forEach((member, index) => {
-            gsap.from(member, {
-                scrollTrigger: {
-                    trigger: member,
-                    start: 'top 80%',
-                    once: true,
-                },
-                duration: 0.6,
-                opacity: 0,
-                y: 50,
-                delay: index * 0.15,
-                ease: 'power3.out',
-            });
-
-            const memberImage = member.querySelector('.team-member-image img');
-            member.addEventListener('mouseenter', () => {
-                gsap.to(member, {
-                    duration: 0.3,
-                    y: -10,
-                    boxShadow: '0 30px 70px rgba(236, 72, 153, 0.3)',
-                });
-
-                if (memberImage) {
-                    gsap.to(memberImage, {
-                        duration: 0.3,
-                        scale: 1.1,
-                    });
-                }
-            });
-
-            member.addEventListener('mouseleave', () => {
-                gsap.to(member, {
-                    duration: 0.3,
-                    y: 0,
-                    boxShadow: '0 0 0 rgba(236, 72, 153, 0)',
-                });
-
-                if (memberImage) {
-                    gsap.to(memberImage, {
-                        duration: 0.3,
-                        scale: 1,
-                    });
-                }
-            });
-
-            member.addEventListener('click', () => {
-                const memberName = member.querySelector('h4').textContent;
-                createRipple({ clientX: member.offsetWidth / 2, clientY: member.offsetHeight / 2 }, member);
-                showNotification(`👋 Meet ${memberName} - Great to connect!`);
-            });
-        });
-
-        // Animate social links
-        document.querySelectorAll('.team-member-socials a, .social-links a').forEach(link => {
-            link.addEventListener('mouseenter', () => {
-                gsap.to(link, {
-                    duration: 0.2,
-                    scale: 1.3,
-                });
-            });
-
-            link.addEventListener('mouseleave', () => {
-                gsap.to(link, {
-                    duration: 0.2,
-                    scale: 1,
-                });
-            });
-
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                createRipple({ clientX: this.offsetWidth / 2, clientY: this.offsetHeight / 2 }, this);
-                showNotification(`🔗 Opening social profile...`);
-            });
-        });
-    </script>
+    <script src="javascript/about.js"></script>
 </body>
 </html>
