@@ -1788,3 +1788,28 @@ button,
         font-size: 2.5rem;
     }
 }
+
+@media (max-width: 480px) {
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .review-card,
+    .feature-card,
+    .category-card {
+        width: 100%;
+    }
+
+    .footer {
+        padding: 40px 15px;
+    }
+
+    .profile-header {
+        padding: 20px;
+    }
+}
