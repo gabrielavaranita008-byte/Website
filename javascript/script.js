@@ -1829,3 +1829,69 @@ gsap.registerPlugin(ScrollTrigger);
 
 // ===== SMOOTH SCROLL BEHAVIOR =====
 gsap.registerPlugin(ScrollTrigger);
+
+// DATABASE IMPLEMENTATION
+
+function getStoredReviews() {
+
+    return JSON.parse(
+        localStorage.getItem('rateMe_reviews') || '[]'
+    );
+}
+
+function saveReview(reviewData) {
+
+    let reviews = getStoredReviews();
+
+    reviews.push(reviewData);
+
+    localStorage.setItem(
+        'rateMe_reviews',
+        JSON.stringify(reviews)
+    );
+}
+
+function saveUserProfile(profileData) {
+
+    localStorage.setItem(
+        'rateMe_profile',
+        JSON.stringify(profileData)
+    );
+}
+
+function getUserProfile() {
+
+    return JSON.parse(
+        localStorage.getItem('rateMe_profile') || '{}'
+    );
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    const ratingForm =
+        document.getElementById('rating-form');
+
+    if (ratingForm) {
+
+        ratingForm.addEventListener('submit', (e) => {
+
+            e.preventDefault();
+
+            const reviewText =
+                ratingForm.querySelector('textarea').value;
+
+            const currentUser =
+                JSON.parse(localStorage.getItem('rateMe_user'));
+
+            const reviewData = {
+                user: currentUser?.name || 'Anonymous',
+                text: reviewText,
+                createdAt: new Date().toISOString()
+            };
+
+            saveReview(reviewData);
+
+            alert('Review saved successfully!');
+        });
+    }
+});
