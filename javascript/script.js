@@ -2037,3 +2037,19 @@ function saveProfileChanges() {
 document
     .getElementById('edit-profile-btn')
     .addEventListener('click', openEditProfileModal);
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+    console.log('Demo version loaded successfully.');
+
+    initNavigation();
+
+    loadReviews();
+
+    const user =
+        JSON.parse(localStorage.getItem('rateMe_user'));
+
+    if (user) {
+        console.log(User loaded: ${user.name});
+    }
+});
