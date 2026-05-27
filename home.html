@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RateMe - Premium Review Platform</title>
+    <title>RateMe</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="image/star.png">
 </head>
 <body>
     <!-- Navigation -->
@@ -20,33 +21,19 @@
                 <li><a href="categories.html" class="nav-link">Categories</a></li>
                 <li><a href="profile.html" class="nav-link">Profile</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
-                <li><button id="nav-login-btn" class="nav-link" style="background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%); padding: 8px 20px; border-radius: 25px; border: none; cursor: pointer; color: white; font-weight: 600; transition: all 0.3s ease;">🔐 Login</button></li>
+                <li><button id="nav-login-btn" class="nav-link" style="background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%); padding: 8px 20px; border-radius: 25px; border: none; cursor: pointer; color: white; font-weight: 600; transition: all 0.3s ease;">Login</button></li>
             </ul>
         </div>
     </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="stars-bg">
-            <span class="star"></span>
-            <span class="star"></span>
-            <span class="star"></span>
-            <span class="star"></span>
-            <span class="star"></span>
-        </div>
-        
+    <!-- HERO -->
+        <section class="hero" id="home">
+        <div class="hero-content">
         <a href="#reviews" class="cta-button" style="text-decoration: none; display: inline-block; text-align: center;">Start Rating Now</a>
-            <h1 class="hero-title">
-                <span class="word">Lasă</span>
-                <span class="word">un</span>
-                <span class="word">review</span>
-            </h1>
+            <h1 class="hero-title">Lasă un review</h1>
             <p class="hero-subtitle">Locul unde opiniile prind valoare</p>
-            <button class="cta-button">Start Rating Now</button>
-            <div class="home-search">
-                <input id="home-search-input" type="search" placeholder="Caută recenzii, categorii, funcții...">
-                <div id="home-search-results" class="home-search-results"></div>
-            </div>
+           <div class="home-search reveal">
+                <input type="search" placeholder="Caută recenzii, categorii, funcții...">
+                <div class="search-results"></div>
         </div>
 
         <div class="hero-shapes">
@@ -56,17 +43,20 @@
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section id="features" class="features">
-        <div class="container">
+    
+   <!-- FEATURES -->
+    <section class="features" id="features">
             <h2 class="section-title">Why Choose RateMe?</h2>
-            <div class="features-grid">
+            <div class="container"></div>
+            <div class="feature-grid">
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-image"></i>
                     </div>
                     <h3>Recenzii vizuale</h3>
-                    <p>Transformă opiniile în imagini spectaculoase, pline de energie vizuală.</p>
+                    <p>Transformă opiniile în imagini spectaculoase,
+                        pline de energie vizuală.
+                    </p>
                 </div>
 
                 <div class="feature-card">
