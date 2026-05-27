@@ -1895,3 +1895,100 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+class UserManager {
+
+    constructor() {
+
+        this.currentUser = this.loadUser();
+
+        this.init();
+    }
+
+    init() {
+
+        const loginBtn =
+            document.getElementById('nav-login-btn');
+
+        if (loginBtn) {
+
+            loginBtn.addEventListener(
+                'click',
+                () => openModal('login-modal')
+            );
+        }
+
+        const loginForm =
+            document.getElementById('login-form');
+
+        if (loginForm) {
+
+            loginForm.addEventListener(
+                'submit',
+                (event) => this.handleLogin(event)
+            );
+        }
+
+        this.updateLoginUI();
+    }
+
+    handleLogin(event) {
+
+        event.preventDefault();
+
+        const name =
+            document.getElementById('user-name').value.trim();
+
+        const email =
+            document.getElementById('user-email').value.trim();
+
+        const password =
+            document.getElementById('user-password').value;
+
+        if (!name || !email || !password) {
+
+            alert('Please complete all fields.');
+
+            return;
+        }
+
+        this.currentUser = {
+            name,
+            email,
+            password
+        };
+
+        localStorage.setItem(
+            'rateMe_user',
+            JSON.stringify(this.currentUser)
+        );
+
+        this.updateLoginUI();
+
+        alert(`Welcome ${name}!`);
+    }
+
+    updateLoginUI() {
+
+        const navBtn =
+            document.getElementById('nav-login-btn');
+
+        if (this.currentUser && navBtn) {
+
+            navBtn.textContent =
+                `👤 ${this.currentUser.name}`;
+        }
+    }
+
+    loadUser() {
+
+        const user =
+            localStorage.getItem('rateMe_user');
+
+        return user
+            ? JSON.parse(user)
+            : null;
+    }
+}
+
+const userManager = new UserManager();
